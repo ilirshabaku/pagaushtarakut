@@ -174,7 +174,13 @@
                         const total = pagaPerGrade + veshtiresia + demshmeria + ushqimet;
                         document.getElementById("nentotali").textContent = total;
 
-                        const percent95 = Math.round(total * 0.095);
+                        let percent95;
+                            if(total>176416) {
+                                percent95 = Math.round(176416 * 0.095);
+                            } else {
+                                percent95 = Math.round(total * 0.095);
+                            }
+                        
                         document.getElementById("sigurimet_shoqerore").textContent = percent95;
 
                         const percent17 = Math.round(total * 0.017);
