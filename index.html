@@ -169,13 +169,13 @@
                         const pagaPerGrade = parseFloat(document.getElementById("paga_per_grade").textContent) || 0;
                         const veshtiresia = parseFloat(document.getElementById("veshtiresia").value) || 0;
                         const demshmeria = parseFloat(document.getElementById("demshmeria").value) || 0;
-                        const ushqimet = parseFloat(document.getElementById("ushqimet").value) || 0;
+                        const specialitet = parseFloat(document.getElementById("specialitet").value) || 0;
                 
-                        const total = pagaPerGrade + veshtiresia + demshmeria + ushqimet;
+                        const total = pagaPerGrade + veshtiresia + demshmeria + specialitet;
                         document.getElementById("nentotali").textContent = total;
 
                         let percent95;
-                            if(total>176416) {
+                            if(total > 176416) {
                                 percent95 = Math.round(176416 * 0.095);
                             } else {
                                 percent95 = Math.round(total * 0.095);
