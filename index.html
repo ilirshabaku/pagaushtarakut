@@ -156,7 +156,7 @@
                     <td style="border-left: none; border-right: none;"> </td>
                     <td style="border-left: none;"> </td>
                     <td>
-                        <input type="text" id="ushqimet" name="ushqimet" style="width: 133px; text-align: right; font-size: 16px;">
+                        <input type="text" id="specialitet" name="specialitet" style="width: 133px; text-align: right; font-size: 16px;">
                     </td>
                 </tr>
                 <tr>
@@ -170,9 +170,9 @@
                         const pagaPerGrade = parseFloat(document.getElementById("paga_per_grade").textContent) || 0;
                         const veshtiresia = parseFloat(document.getElementById("veshtiresia").value) || 0;
                         const demshmeria = parseFloat(document.getElementById("demshmeria").value) || 0;
-                        const ushqimet = parseFloat(document.getElementById("ushqimet").value) || 0;
+                        const specialitet = parseFloat(document.getElementById("specialitet").value) || 0;
                 
-                        const total = pagaPerGrade + veshtiresia + demshmeria + ushqimet;
+                        const total = pagaPerGrade + veshtiresia + demshmeria + specialitet;
                         document.getElementById("nentotali").textContent = total;
 
                         const percent95 = Math.round(total * 0.095);
@@ -216,7 +216,7 @@
                     document.getElementById("gradat").addEventListener("change", calculateTotal);
                     document.getElementById("veshtiresia").addEventListener("change", calculateTotal);
                     document.getElementById("demshmeria").addEventListener("change", calculateTotal);
-                    document.getElementById("ushqimet").addEventListener("input", calculateTotal);
+                    document.getElementById("specialitet").addEventListener("input", calculateTotal);
                     
                     calculateTotal(); // Initial calculation on page load
                 </script>
